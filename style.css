@@ -1,3 +1,4 @@
+/* Reset e Configuração Geral */
 * {
     margin: 0;
     padding: 0;
@@ -7,30 +8,22 @@
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #F0F4F8;
+    color: #1E293B;
 }
 
-hr {
-    border: none;
-    height: 2px;
-    background-color: #1E3A8A;
-    margin: 40px auto; 
-    width: 80%; 
-}
-
-
+/* Barra de Navegação */
 .container header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    padding: 1rem 5%;
     background-color: #1E3A8A;
-}
-
-.content {
-    padding: 80px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
-    width: 60%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .container header h1 {
@@ -44,99 +37,272 @@ hr {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
-    margin-right: 200px;
+    padding: 0;
 }
 
 .container header ul li {
     list-style: none;
-    margin-left: 10px;
+    margin-left: 20px;
 }
 
 .container header ul li a {
     text-decoration: none;
     color: #FFFFFF;
     font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
 }
 
+.container header ul li a:hover {
+    color: #FFD700;
+}
+
+/* Seção Principal */
 .container main {
     display: flex;
-    justify-content: column;
-    align-items: flex-start;
-    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 120px 10%;
+    flex-wrap: wrap;
 }
 
 .container main .content {
-    margin-left: 200px;
+    width: 50%;
 }
 
 .container main .content h1 {
     font-size: 48px;
     font-weight: bold;
     color: #1E3A8A;
-    margin-bottom: 10px;
-    padding-top: 100px;
-    padding-bottom: 10px;
-
+    margin-bottom: 20px;
 }
 
 .container main .content p {
-    font-size: 16px;
-    color: #1E293B;
     font-size: 18px;
+    line-height: 1.6;
 }
 
 .container main .image {
-    margin-left: 200px;
+    width: 40%;
+    text-align: center;
 }
 
 .container main .image img {
-    width: 300px;
-}
-
-.container .skills {
-    margin-left: 200px;
-}
-
-.container .skills h2 {
-    font-size: 24px;
-    padding-top: 10px;
-    padding-bottom: 30px;
-}
-
-.skills ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    align-items: center;
-}
-
-.skills ul li {
-    display: flex;
-    flex-direction: column;
-}
-
-.skills ul li:nth-child(odd) {
-    align-self: flex-start;
-}
-
-.skills ul li:nth-child(even) {
-    align-self: flex-end;
-}
-
-.skills ul li img {
-    width: 100px;
+    max-width: 100%;
     height: auto;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Separador */
+hr {
+    border: none;
+    height: 2px;
+    background-color: #1E3A8A;
+    margin: 40px auto;
+    width: 80%;
+}
+
+/* Timeline - Experiência Profissional */
+.timeline {
+    text-align: center;
+    padding: 50px 10%;
+    position: relative;
+}
+
+.timeline h2 {
+    font-size: 28px;
+    color: #1E3A8A;
+    margin-bottom: 40px;
+}
+
+/* Estrutura da linha vertical */
+.timeline-container {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+}
+
+.timeline-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 4px;
+    height: 100%;
+    background-color: #1E3A8A;
+    transform: translateX(-50%);
+}
+
+/* Estilizando os itens da timeline */
+.timeline-item {
+    position: relative;
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+    text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+    text-align: left;
+}
+
+.timeline-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.timeline-content:hover {
+    transform: scale(1.05);
+}
+
+/* Criando os "galhos" que ligam os cards à linha central */
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 12px;
+    height: 12px;
+    background-color: #FFD700;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-item:nth-child(odd)::before {
+    right: -6px;
+}
+
+.timeline-item:nth-child(even)::before {
+    left: -6px;
+}
+
+/* Data estilizada */
+.date {
+    display: block;
+    font-size: 14px;
+    color: #1E3A8A;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Botão de Download de Currículo */
+.download {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.btn-download {
+    background-color: #1E3A8A;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.btn-download:hover {
+    background-color: #FFD700;
+    color: #1E3A8A;
+}
+
+/* Seção de Contato */
+#contato {
+    text-align: center;
+    padding: 50px 10%;
+}
+
+#contato h2 {
+    font-size: 28px;
+    color: #1E3A8A;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+}
+
+input, textarea {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
     border-radius: 5px;
 }
 
-.skills ul li p {
+button {
+    background-color: #1E3A8A;
+    color: white;
     font-size: 16px;
-    color: #1E293B;
-    line-height: 1.5;
-    max-width: 600px;
-    margin-top: 10px;
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
 }
 
+button:hover {
+    background-color: #FFD700;
+    color: #1E3A8A;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .container main {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .container main .content, 
+    .container main .image {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .timeline-container::before {
+        left: 20px;
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding-left: 40px;
+        text-align: left;
+    }
+
+    .timeline-item:nth-child(odd) {
+        left: 0;
+    }
+
+    .timeline-item:nth-child(even) {
+        left: 0;
+    }
+
+    .timeline-item::before {
+        left: 10px;
+    }
+
+    .timeline-content img {
+        width: 10px;
+        height: 10px;
+    }
+}
