@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 
 <body>
@@ -49,7 +50,7 @@
             <div class="timeline-item">
                 <div class="timeline-content">
                     <h3>Novo Nordisk</h3>
-                    <span class="date">Jan 2024 - Atual</span>
+                    <span class="date">jan 2024 - Atual</span>
                     <img src="assets/NovoNordisk.png" alt="Novo Nordisk">
                     <p>Atuo no setor de Quality Control, automatizando relatórios, criando dashboards no Power BI e desenvolvendo soluções em Power Apps e Python para otimizar processos.</p>
                 </div>
@@ -58,7 +59,7 @@
             <div class="timeline-item">
                 <div class="timeline-content">
                     <h3>Universidade Estadual de Montes Claros</h3>
-                    <span class="date">Abr 2023 - Fev 2024</span>
+                    <span class="date">abr de 2023 - jan de 2024</span>
                     <img src="assets/Unimontes.PNG" alt="Universidade Estadual de Montes Claros">
                     <p>Atuei na área administrativa, auxiliando no gerenciamento de documentos, organização acadêmica e suporte a docentes e discentes.</p>
                 </div>
@@ -67,7 +68,7 @@
             <div class="timeline-item">
                 <div class="timeline-content">
                     <h3>Prefeitura de Montes Claros</h3>
-                    <span class="date">Set 2021 - Mar 2023</span>
+                    <span class="date">set de 2021 - mar de 2023</span>
                     <img src="assets/PrefeituraDeMontesClaros.png" alt="Prefeitura de Montes Claros">
                     <p>Atuei como estagiário no setor de TI, prestando suporte técnico, manutenção de computadores, redes e servidores Linux.</p>
                 </div>
@@ -76,7 +77,7 @@
             <div class="timeline-item">
                 <div class="timeline-content">
                     <h3>Flex Cursos</h3>
-                    <span class="date">2018 - 2019</span>
+                    <span class="date">jul de 2018 - jul de 2019</span>
                     <img src="assets/FlexCursos.png" alt="Flex Cursos">
                     <p>Atuei em um laboratório de informática, prestando suporte a alunos em softwares como Photoshop, AutoCAD e Pacote Office.</p>
                 </div>
@@ -85,9 +86,29 @@
     </section>
     <hr>
     <section class="container">
-        <div class="skills">
-            <h2>Habilidades</h2>
+        <div class="skills-wrapper">
+            <div class="skills-description">
+                <h2>Conhecimentos</h2>
+                <p id="tech-description">Passe o cursor do mouse no card para ler</p>
+            </div>
+            <div class="skills">
+                <article onmouseover="showDescription('HTML é uma linguagem de marcação, onde marcamos os elementos para definir quais informações a página vai exibir.')" onmouseout="resetDescription()">
+                    <img src="assets/html.png" alt="HTML5">
+                </article>
+                <article onmouseover="showDescription('CSS é responsável pelo estilo e layout das páginas, permitindo a criação de designs responsivos.')" onmouseout="resetDescription()">
+                    <img src="assets/css.png" alt="CSS3">
+                </article>
+                <article onmouseover="showDescription('JavaScript é uma linguagem de programação que permite criar interatividade e dinamismo em páginas web.')" onmouseout="resetDescription()">
+                    <img src="assets/JavaScript.png" alt="JavaScript">
+                </article>
+                <article onmouseover="showDescription('Python é uma linguagem versátil, usada para desenvolvimento web, ciência de dados, automação e muito mais.')" onmouseout="resetDescription()">
+                    <img src="assets/Python.png" alt="Python">
+                </article>
+            </div>
         </div>
     </section>
+    <footer>
+        <p>Desenvolvido por Gabriel Guimarães</p>
+    </footer>
 </body>
 </html>

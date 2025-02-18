@@ -83,7 +83,7 @@ body {
 }
 
 .container main .image {
-    width: 40%;
+    width: 30%;
     text-align: center;
 }
 
@@ -99,7 +99,7 @@ hr {
     border: none;
     height: 2px;
     background-color: #1E3A8A;
-    margin: 40px auto;
+    margin: 5px auto;
     width: 80%;
 }
 
@@ -259,6 +259,84 @@ button {
 button:hover {
     background-color: #FFD700;
     color: #1E3A8A;
+}
+
+.timeline img {
+    width: 70px;
+    filter: drop-shadow(0px 4px 10px rgba(54, 54, 54, 0.1));
+}
+
+/* Layout geral: título à esquerda e cards à direita */
+.skills-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px; /* Espaço entre o texto e os cards */
+    padding: 20px;
+}
+
+/* Área do texto descritivo */
+.skills-description {
+    width: 40%;
+    color: white;
+}
+
+/* Estilizando o título */
+.skills-description h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1E3A8A;
+    margin-bottom: 10px;
+}
+
+/* Parágrafo inicial e descrição */
+.skills-description p {
+    font-size: 20px;
+    color: #1E293B;
+    transition: opacity 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Alinhando os cards à direita */
+.skills {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Estilizando os cards */
+.skills article {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90px;
+    height: 90px;
+    background-color: transparent;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+    background-color: white;
+}
+
+/* Efeito hover no card */
+.skills article:hover {
+    transform: translateY(-5px);
+    border: 1px solid #1E3A8A;
+    box-shadow: 0px 8px 15px rgba(43, 40, 217, 0.3);
+}
+
+/* Ajustando o tamanho dos ícones */
+.skills img {
+    width: 50px;
+    height: auto;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1E3A8A;
+    color: white;
 }
 
 /* Responsividade */
